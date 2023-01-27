@@ -1,14 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BookmarksProvider } from "./utlis/bookmarksContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+/**
+ * App is wrapped with Bookmarks context provider
+ * to provide access to stored values and the reducer
+ */
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <BookmarksProvider>
+            <App />
+        </BookmarksProvider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
