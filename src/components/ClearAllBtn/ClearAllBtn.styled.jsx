@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Btn } from "../Form/Form.styled";
+import { Btn } from "../Button/Btn.styled";
 
 export const ClearAllBtnStyled = styled(Btn)`
     background-color: var(--medium-light);

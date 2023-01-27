@@ -18,7 +18,7 @@ export const BookmarksProvider = ({ children }) => {
         localStorage.setItem("phntm-bookmarks-data", JSON.stringify(bookmarks));
     }, [bookmarks]);
 
-    // return the context component passing the values to the children
+    // return the context component passing the values to its children
     return (
         <BookmarksContext.Provider
             value={{

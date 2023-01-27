@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Btn } from "../../Form/Form.styled";
+import { Btn } from "../../Button/Btn.styled";
 
+// bookmark item
 export const BookmarkItemStyled = styled.li`
     animation: pop-up 0.5s ease;
     background-color: var(--medium);
@@ -20,12 +21,14 @@ export const BookmarkItemStyled = styled.li`
     }
 `;
 
+// base style for icon buttons (square)
 export const BtnIcon = styled(Btn)`
     padding: 0;
     height: clamp(40px, 4vmin, 50px);
     width: clamp(40px, 6vmin, 50px);
 `;
 
+// delete item button - hover red bg
 export const DeleteItemBtn = styled(BtnIcon)`
     background-color: var(--light);
 
@@ -34,10 +37,12 @@ export const DeleteItemBtn = styled(BtnIcon)`
     }
 `;
 
+// edit item button
 export const EditItemBtn = styled(BtnIcon)`
     margin-left: 0.5em;
 `;
 
+// the link itself
 export const BmLink = styled.a`
     color: white;
     width: 100%;

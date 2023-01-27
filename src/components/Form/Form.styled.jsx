@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import { Btn } from "../Button/Btn.styled";
 
+// form element
 export const FormStyled = styled.form`
     display: flex;
     gap: 1em;
@@ -7,6 +9,8 @@ export const FormStyled = styled.form`
     width: 100%;
 `;
 
+// input text element for user's link
+// if modifier prop is "edit-mode" remove the background to indicate the user is just editting the value
 export const InputTxt = styled.input`
     border-radius: 0.5em;
     border: 1px solid #fefefe;
@@ -24,24 +28,7 @@ export const InputTxt = styled.input`
             : ""};
 `;
 
-export const Btn = styled.button`
-    background-color: var(--primary);
-    border-radius: 0.5em;
-    color: white;
-    font: inherit;
-    font-weight: bold;
-
-    &:hover:not(:disabled) {
-        background-color: var(--primary-hover);
-    }
-
-    &:disabled {
-        background-color: var(--medium);
-        color: var(--medium-light);
-        cursor: default;
-    }
-`;
-
+// Submit button, extends base button style
 export const SubmitBtn = styled(Btn)`
     max-width: 20%;
     min-width: 3em;
@@ -49,6 +36,7 @@ export const SubmitBtn = styled(Btn)`
     width: 100%;
 `;
 
+// status message base styling
 export const StatusMsg = styled.div`
     border: 2px solid white;
     border-radius: 0.3em;
@@ -58,11 +46,13 @@ export const StatusMsg = styled.div`
     text-align: center;
 `;
 
+// Success status message styling - extends StatusMsg
 export const SuccessMsg = styled(StatusMsg)`
     background-color: rgb(4 120 87);
     border-color: rgb(5 150 105);
 `;
 
+// Error status message styling - extends StatusMsg
 export const ErrorMsg = styled(StatusMsg)`
     background-color: rgb(71 85 105);
     border-color: rgb(100 116 139);

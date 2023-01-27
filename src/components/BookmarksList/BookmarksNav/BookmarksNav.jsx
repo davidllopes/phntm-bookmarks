@@ -40,7 +40,10 @@ export const BookmarksNav = ({
             >
                 <i className="fa-solid fa-angle-left"></i>
             </Indicator>
-            {indicators}
+            {
+                //render indicator buttons
+                indicators
+            }
             <Indicator
                 onClick={() => setStartItem(startItem + limit)}
                 disabled={

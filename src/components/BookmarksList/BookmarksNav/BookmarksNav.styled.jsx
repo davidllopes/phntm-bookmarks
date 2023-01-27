@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Btn } from "../../Form/Form.styled";
+import { Btn } from "../../Button/Btn.styled";
 
+// navigation container
 export const BookmarksNavStyled = styled.div`
     display: flex;
     justify-content: center;
@@ -8,6 +9,9 @@ export const BookmarksNavStyled = styled.div`
     width: auto;
 `;
 
+// indicator buttons
+// first and last element have rounded outter corners
+// if the current prop is present, change the style to indicate the current page
 export const Indicator = styled(Btn)`
     background-color: var(--medium-light);
     border-radius: 0;
